@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "user@example.com",
+        "password": "$2a$10$GyV4y3rStulmTOR1EvytkOSrG08lqUWJVJHja4IpJPCSGncXChQ0u",
+        "githubId": null,
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "name": "Jane Doe",
+        "email": "janedoe@example.com",
+        "password": "$2a$10$GyV4y3rStulmTOR1EvytkOSrG08lqUWJVJHja4IpJPCSGncXChQ0u",
+        "githubId": null,
+        "role": "editor"
+    },
+    {
+        "id": 3,
+        "name": "Alice Doe",
+        "email": "alicedoe@example.com",
+        "password": "$2a$10$GyV4y3rStulmTOR1EvytkOSrG08lqUWJVJHja4IpJPCSGncXChQ0u",
+        "githubId": null,
+        "role": "user"
+    }
+]

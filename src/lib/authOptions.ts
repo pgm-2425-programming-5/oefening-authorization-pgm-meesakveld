@@ -3,7 +3,11 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
 // import GoogleProvider from "next-auth/providers/google";
 import bcrypt from "bcryptjs";
-import { users } from "./users";
+import fs from "fs";
+import path from "path";
+import { User } from "@/types/User";
+
+const users = JSON.parse(fs.readFileSync(path.join(process.cwd(), "src/lib/users.json"), "utf-8"));
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -26,7 +30,7 @@ export const authOptions: NextAuthOptions = {
 
         const { email, password } = credentials;
 
-        const user = users.find((user) => user.email === email);
+        const user = users.find((user: User) => user.email === email);
 
         if (user && user.password) {
           const isValid = await bcrypt.compare(password, user.password);
